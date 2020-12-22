@@ -1,0 +1,22 @@
+server:
+  port: 18089
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 102MB
+  application:
+    name: user
+  profiles:
+    active:
+      jdbc,eureka
+
+#feign:
+#  hystrix:
+#    enabled: true
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.changgou.goods.pojo
+

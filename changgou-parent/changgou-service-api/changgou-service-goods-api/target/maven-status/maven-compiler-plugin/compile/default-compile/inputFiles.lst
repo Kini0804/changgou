@@ -1,0 +1,17 @@
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/Template.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/UndoLog.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/feign/SkuFeign.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/CategoryBrand.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/feign/SpuFeign.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/Pref.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/Brand.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/feign/CategoryFeign.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/Sku.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/Category.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/StockBack.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/Spec.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/Image.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/Para.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/Spu.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/Goods.java
+/Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-service-api/changgou-service-goods-api/src/main/java/com/changgou/goods/pojo/Album.java

@@ -1,0 +1,28 @@
+server:
+  port: 18085
+spring:
+  application:
+    name: search
+  profiles:
+    active:
+      eureka
+  data:
+    elasticsearch:
+      cluster-name: my-application
+      cluster-nodes: 10.211.55.3:9300
+  main:
+    allow-bean-definition-overriding: true
+feign:
+  hystrix:
+    enabled: true
+#超时配置
+ribbon:
+  ReadTimeout: 300000
+
+hystrix:
+  command:
+    default:
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000

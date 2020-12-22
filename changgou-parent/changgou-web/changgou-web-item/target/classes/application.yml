@@ -1,0 +1,17 @@
+server:
+  port: 18089
+spring:
+  thymeleaf:
+    cache: false
+  application:
+    name: webItem
+  main:
+    allow-bean-definition-overriding: true
+  profiles:
+    active:
+      eureka
+feign:
+  hystrix:
+    enabled: true
+pagepath: /Users/liushaodong/IdeaProjects/changgou/changgou-parent/changgou-web/changgou-web-item/src/main/resources/templates/items
+

@@ -1,0 +1,14 @@
+com/changgou/user/feign/AddressFeign.class
+com/changgou/user/pojo/Provinces.class
+com/changgou/user/feign/OauthClientDetailsFeign.class
+com/changgou/user/pojo/Cities.class
+com/changgou/user/feign/CitiesFeign.class
+com/changgou/user/pojo/OauthClientDetails.class
+com/changgou/user/pojo/User.class
+com/changgou/user/feign/UserFeign.class
+com/changgou/user/feign/ProvincesFeign.class
+com/changgou/user/pojo/UndoLog.class
+com/changgou/user/feign/AreasFeign.class
+com/changgou/user/feign/UndoLogFeign.class
+com/changgou/user/pojo/Areas.class
+com/changgou/user/pojo/Address.class

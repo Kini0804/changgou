@@ -1,0 +1,31 @@
+server:
+  port: 18083
+spring:
+  application:
+    name: canal
+  profiles:
+    active:
+      eureka
+  redis:
+    host: 10.211.55.3
+    port: 6379
+feign:
+  hystrix:
+    enabled: false
+#hystrix 配置
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          #如果enabled设置为false，则请求超时交给ribbon控制
+          enabled: true
+        isolation:
+          strategy: SEMAPHORE
+#canal配置
+canal:
+  client:
+    instances:
+      example:
+        host: 10.211.55.3
+        port: 11111

@@ -1,0 +1,7 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://10.211.55.3:17001/eureka
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true

@@ -1,0 +1,17 @@
+server:
+  port: 18088
+spring:
+  thymeleaf:
+    cache: false
+  application:
+    name: search-web
+  main:
+    allow-bean-definition-overriding: true
+  profiles:
+    active:
+      eureka
+feign:
+  hystrix:
+    enabled: true
+
+

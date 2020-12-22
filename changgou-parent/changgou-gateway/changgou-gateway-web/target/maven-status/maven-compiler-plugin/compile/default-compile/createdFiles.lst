@@ -1,0 +1,3 @@
+com/changgou/web/util/JwtUtil.class
+com/changgou/web/GatewayApplication.class
+com/changgou/web/filter/AuthorizeFilter.class

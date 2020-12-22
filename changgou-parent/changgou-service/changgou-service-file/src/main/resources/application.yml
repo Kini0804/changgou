@@ -1,0 +1,14 @@
+server:
+  port: 18082
+spring:
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 102MB
+  application:
+    name: file
+  profiles:
+    active: eureka
+#feign:
+#  hystrix:
+#    enabled: true

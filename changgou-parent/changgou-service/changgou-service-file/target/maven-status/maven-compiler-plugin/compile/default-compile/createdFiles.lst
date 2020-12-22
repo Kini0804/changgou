@@ -1,0 +1,6 @@
+com/changgou/file/utils/FastDFSUtils.class
+com/changgou/file/service/FileService.class
+com/changgou/file/service/impl/FileServiceImpl.class
+com/changgou/file/pojo/FastDFSFile.class
+com/changgou/file/FileApplication.class
+com/changgou/file/controller/FileController.class
