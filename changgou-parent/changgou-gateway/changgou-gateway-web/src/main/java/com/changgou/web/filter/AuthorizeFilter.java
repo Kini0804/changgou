@@ -25,7 +25,7 @@ public class AuthorizeFilter implements GlobalFilter, Ordered {
         ServerHttpRequest request = exchange.getRequest();
         ServerHttpResponse response = exchange.getResponse();
         String path = request.getURI().getPath();
-        if(path.startsWith("/api/user/login")){
+        if(path.startsWith("/api/login")){
             return chain.filter(exchange);
         }
         String jwt = request.getHeaders().getFirst(AUTHORIZE_TOKEN);
@@ -43,8 +43,9 @@ public class AuthorizeFilter implements GlobalFilter, Ordered {
             return response.setComplete();
         }
         try {
-            Claims claims = JwtUtil.parseJwt(jwt);
-            request.mutate().header(AUTHORIZE_TOKEN, claims.getSubject());
+//            Claims claims = JwtUtil.parseJwt(jwt);
+//            request.mutate().header(AUTHORIZE_TOKEN, claims.getSubject());
+            request.mutate().header(AUTHORIZE_TOKEN, "Bearer " + jwt);
         }catch (Exception e){
             e.printStackTrace();
             response.setStatusCode(HttpStatus.UNAUTHORIZED);

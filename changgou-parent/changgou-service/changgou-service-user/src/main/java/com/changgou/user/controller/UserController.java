@@ -10,6 +10,7 @@ import entity.Result;
 import entity.StatusCode;
 import io.swagger.annotations.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.util.StringUtils;
 import org.springframework.web.bind.annotation.*;
 import springfox.documentation.spring.web.json.Json;
@@ -137,7 +138,8 @@ public class UserController {
      */
     @ApiOperation(value = "User根据ID查询",notes = "根据ID查询User方法详情",tags = {"UserController"})
     @ApiImplicitParam(paramType = "path", name = "id", value = "主键ID", required = true, dataType = "String")
-    @GetMapping("/{id}")
+//    @PreAuthorize("hasAnyAuthority('user','vip')")
+    @GetMapping({"/{id}", "/load/{id}"})
     public Result<User> findById(@PathVariable String id){
         //调用UserService实现根据主键查询User
         User user = userService.findById(id);
@@ -149,6 +151,7 @@ public class UserController {
      * @return
      */
     @ApiOperation(value = "查询所有User",notes = "查询所User有方法详情",tags = {"UserController"})
+    @PreAuthorize("hasAnyAuthority('admin')")
     @GetMapping
     public Result<List<User>> findAll(){
         //调用UserService实现查询所有User

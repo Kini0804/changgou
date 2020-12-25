@@ -58,12 +58,13 @@ public class AuthServiceImpl implements AuthService {
      */
     private AuthToken applyToken(String username, String password, String clientId, String clientSecret) {
         //选中认证服务的地址
-//        ServiceInstance serviceInstance = loadBalancerClient.choose("user-auth");
-//        if (serviceInstance == null) {
-//            throw new RuntimeException("找不到对应的服务");
-//        }
+        ServiceInstance serviceInstance = loadBalancerClient.choose("user-auth");
+        if (serviceInstance == null) {
+            throw new RuntimeException("找不到对应的服务");
+        }
+        System.out.println(serviceInstance.getUri());
         //获取令牌的url
-        String path = "http://127.0.0.1:9200/oauth/token";
+        String path =serviceInstance.getUri() + "/oauth/token";
         //定义body
         MultiValueMap<String, String> formData = new LinkedMultiValueMap<>();
         //授权方式
@@ -88,7 +89,7 @@ public class AuthServiceImpl implements AuthService {
         Map map = null;
         try {
             //http请求spring security的申请令牌接口
-            ResponseEntity<Map> mapResponseEntity = restTemplate.exchange(path, HttpMethod.POST,new HttpEntity<MultiValueMap<String, String>>(formData, header), Map.class);
+            ResponseEntity<Map> mapResponseEntity = restTemplate.exchange(path, HttpMethod.POST, new HttpEntity<>(formData, header), Map.class);
             //获取响应数据
             map = mapResponseEntity.getBody();
             System.out.println(map);

@@ -17,7 +17,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.util.Objects;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/login")
 public class AuthController {
     @Value("${auth.clientId}")
     private String clientId;
@@ -34,11 +34,11 @@ public class AuthController {
     @Autowired
     AuthService authService;
 
-    @GetMapping("/login")
+    @GetMapping
     public Result login(String username, String password){
         AuthToken authToken = authService.login(username, password, clientId, clientSecret);
         HttpServletResponse response = ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getResponse();
         CookieUtil.addCookie(response, cookieDomain, "/", "Authorization", authToken.getAccessToken(), cookieMaxAge, false);
-        return new Result(true, StatusCode.OK, "success");
+        return new Result(true, StatusCode.OK, "success", authToken);
     }
 }

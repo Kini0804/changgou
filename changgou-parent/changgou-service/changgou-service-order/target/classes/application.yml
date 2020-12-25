@@ -1,0 +1,31 @@
+server:
+  port: 18090
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 102MB
+  application:
+    name: order
+  profiles:
+    active:
+      jdbc,eureka
+  redis:
+    host: 10.211.55.3
+    port: 6379
+
+#feign:
+#  hystrix:
+#    enabled: true
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath:mapper/*Mapper.xml
+  type-aliases-package: com.changgou.goods.pojo
+
+logging:
+  level:
+    com.changgou.goods: warn
+

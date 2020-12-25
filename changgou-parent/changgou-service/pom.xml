@@ -18,6 +18,7 @@
         <module>changgou-service-content</module>
         <module>changgou-service-search</module>
         <module>changgou-service-user</module>
+        <module>changgou-service-order</module>
     </modules>
 
     <dependencies>
@@ -31,6 +32,10 @@
             <artifactId>druid</artifactId>
             <version>1.1.10</version>
         </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.springframework.cloud</groupId>-->
+<!--            <artifactId>spring-cloud-starter-oauth2</artifactId>-->
+<!--        </dependency>-->
     </dependencies>
 
 </project>

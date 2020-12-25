@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://10.211.55.3:3307/changgou_order?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC
+    username: liushaodong2
+    password: liushaodong
+    type: com.alibaba.druid.pool.DruidDataSource
